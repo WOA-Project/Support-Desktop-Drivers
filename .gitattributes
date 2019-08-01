@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Treat everything as binary, as cat files require binary identity for signatures to match
+* -text
