@@ -1,0 +1,66 @@
+;
+; spapps.inf
+;
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SYSTEM
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %QCOM%
+DriverVer   = 09/09/2015,1.0.1077.0000
+CatalogFile = spapps.cat
+
+[DestinationDirs]
+; 10 = Windows
+spapps.Files.NTarm = 10,Provisioning\Packages
+PstDrv.Files        = 10,OEM
+
+[SourceDisksNames]
+0 = %DiskId1%
+
+[SourceDisksFiles]
+SPApps.ps1 = 0,,
+SPApps.ppkg = 0,,
+
+Microsoft.NET.Native.Framework.2.2.appx = 0,,
+Microsoft.NET.Native.Runtime.2.2.appx = 0,,
+Microsoft.VCLibs.ARM64.14.00.appx = 0,,
+
+CommsPhone.appxbundle = 0,,
+Microsoft.VCLibs.ARM.14.00.appx = 0,,
+
+Chat.appxbundle = 0,,
+
+
+;*****************************************
+; spapps  Install Section
+;*****************************************
+
+[DefaultInstall.NTARM64]
+CopyFiles = spapps.Files.NTarm,PstDrv.Files
+
+; System32
+[spapps.Files.NTarm]
+SPApps.ppkg
+
+[PstDrv.Files]
+SPApps.ppkg
+SPApps.ps1
+
+Microsoft.NET.Native.Framework.2.2.appx
+Microsoft.NET.Native.Runtime.2.2.appx
+Microsoft.VCLibs.ARM64.14.00.appx
+
+CommsPhone.appxbundle
+Microsoft.VCLibs.ARM.14.00.appx
+
+Chat.appxbundle
+
+
+[Strings]
+REG_SZ                 = 0x00000000
+SPSVCINST_ASSOCSERVICE = 0x00000002
+QCOM                   = "Qualcomm"
+QC                     = "Qualcomm Technologies, INC"
+DiskId1                = "Second Party Apps Installation Disk #1"
+MSVC120.DeviceDesc     = "Second Party Apps Library Package"
+
