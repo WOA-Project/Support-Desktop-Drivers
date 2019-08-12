@@ -43,7 +43,6 @@ CopyFiles = spapps.Files.NTarm,PstDrv.Files
 SPApps.ppkg
 
 [PstDrv.Files]
-SPApps.ppkg
 SPApps.ps1
 
 Microsoft.NET.Native.Framework.2.2.appx
