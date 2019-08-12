@@ -13,7 +13,7 @@ CatalogFile = chargingresources.cat
 [DestinationDirs]
 ; 10 = Windows
 ; 12 = Drivers
-PstDrv.Files  = 10,OEM
+PstDrv.Files  = 10,OEM\Drivers
 PreOobe.Files = 10,Setup\Scripts
 
 [SourceDisksNames]

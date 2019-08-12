@@ -12,7 +12,7 @@ CatalogFile = spapps.cat
 [DestinationDirs]
 ; 10 = Windows
 spapps.Files.NTarm = 10,Provisioning\Packages
-PstDrv.Files        = 10,OEM
+PstDrv.Files        = 10,OEM\Applications
 
 [SourceDisksNames]
 0 = %DiskId1%
