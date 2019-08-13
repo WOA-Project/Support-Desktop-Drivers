@@ -29,6 +29,7 @@ CommsPhone.appxbundle = 0,,
 Microsoft.VCLibs.ARM.14.00.appx = 0,,
 
 Chat.appxbundle = 0,,
+Airwaves.appxbundle = 0,,
 
 
 ;*****************************************
@@ -53,6 +54,7 @@ CommsPhone.appxbundle
 Microsoft.VCLibs.ARM.14.00.appx
 
 Chat.appxbundle
+Airwaves.appxbundle
 
 
 [Strings]
