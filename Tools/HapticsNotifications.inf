@@ -28,6 +28,10 @@ HapticsNotifications.exe
 [HapticsNotifications_Reg]
 HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Run", "HapticsNotifications", %REG_EXPAND_SZ%, "%%windir%%\system32\HapticsNotifications.exe"
 
+HKLM, "SOFTWARE\OEM\Vibra",                            "Duration",             %REG_DWORD%,     0x5
+HKLM, "SOFTWARE\OEM\Vibra",                            "Intensity",            %REG_DWORD%,     0x50
+HKLM, "SOFTWARE\OEM\Vibra",                            "Enabled",              %REG_DWORD%,     0x1
+
 [Strings]
 QC            = "Qualcomm"
 
