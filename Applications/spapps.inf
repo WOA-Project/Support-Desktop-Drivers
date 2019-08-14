@@ -12,7 +12,7 @@ CatalogFile = spapps.cat
 [DestinationDirs]
 ; 10 = Windows
 spapps.Files.NTarm = 10,Provisioning\Packages
-PstDrv.Files        = 10,OEM\Applications
+PstDrv.Files       = 10,OEM\Applications
 
 [SourceDisksNames]
 0 = %DiskId1%
@@ -29,6 +29,7 @@ CommsPhone.appxbundle = 0,,
 Microsoft.VCLibs.ARM.14.00.appx = 0,,
 
 Chat.appxbundle = 0,,
+Tips.appxbundle = 0,,
 Airwaves.appxbundle = 0,,
 
 
@@ -54,6 +55,7 @@ CommsPhone.appxbundle
 Microsoft.VCLibs.ARM.14.00.appx
 
 Chat.appxbundle
+Tips.appxbundle
 Airwaves.appxbundle
 
 
