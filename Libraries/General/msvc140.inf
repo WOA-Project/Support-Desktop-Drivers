@@ -1,0 +1,44 @@
+;
+; msvc140.inf
+;
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SYSTEM
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %IHV%
+DriverVer   = 09/09/2015,14.16.27023.1
+CatalogFile = msvc140.cat
+
+[DestinationDirs]
+; 11 = system32
+; 10 = Windows
+msvc140.Files.NTarm_11 = 11
+
+[SourceDisksNames]
+0 = %DiskId1%
+
+[SourceDisksFiles]
+concrt140.dll    = 0,,
+msvcp140.dll     = 0,,
+vcruntime140.dll = 0,,
+
+;*****************************************
+; msvc140  Install Section
+;*****************************************
+
+[DefaultInstall.NTARM64]
+CopyFiles = msvc140.Files.NTarm_11
+
+; System32
+[msvc140.Files.NTarm_11]
+concrt140.dll
+msvcp140.dll
+vcruntime140.dll
+
+[Strings]
+REG_SZ                 = 0x00000000
+SPSVCINST_ASSOCSERVICE = 0x00000002
+IHV                    = "LumiaWOA Authors"
+DiskId1                = "Microsoft Visual C Runtime 140 Installation Disk #1"
+msvc140.DeviceDesc     = "Microsoft Visual C Runtime 140 Library Package"
+
