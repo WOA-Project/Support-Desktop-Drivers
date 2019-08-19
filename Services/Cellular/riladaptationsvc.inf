@@ -5,8 +5,8 @@
 Signature   = "$WINDOWS NT$"
 Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
-Provider    = %QC%
-DriverVer   = 09/09/2015,10.0.14903.1000
+Provider    = %IHV%
+DriverVer   = 09/09/2016,10.0.14903.1000
 CatalogFile = RILAdaptation.cat
 
 [DestinationDirs]
@@ -69,7 +69,7 @@ phoneinfo.dll
 QxdmFilter.bin
 
 [Strings]
-QC            = "Qualcomm"
+IHV           = "LumiaWOA Authors"
 
 REG_SZ        = 0x00000000
 REG_MULTI_SZ  = 0x00010000

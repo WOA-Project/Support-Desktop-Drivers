@@ -11,7 +11,6 @@ CatalogFile = msvc140.cat
 
 [DestinationDirs]
 ; 11 = system32
-; 10 = Windows
 msvc140.Files.NTarm_11 = 11
 
 [SourceDisksNames]
@@ -36,9 +35,6 @@ msvcp140.dll
 vcruntime140.dll
 
 [Strings]
-REG_SZ                 = 0x00000000
-SPSVCINST_ASSOCSERVICE = 0x00000002
 IHV                    = "LumiaWOA Authors"
-DiskId1                = "Microsoft Visual C Runtime 140 Installation Disk #1"
-msvc140.DeviceDesc     = "Microsoft Visual C Runtime 140 Library Package"
+DiskId1                = "Microsoft Visual C++ 140 Installation Disk #1"
 
