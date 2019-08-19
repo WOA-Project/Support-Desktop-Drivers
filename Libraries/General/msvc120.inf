@@ -44,6 +44,6 @@ msvcp120.dll, msvcarm32p120.dll, , 0x00004000,
 msvcr120.dll, msvcarm32r120.dll, , 0x00004000,
 
 [Strings]
-IHV                    = "LumiaWOA Authors"
+IHV                    = "LumiaWoA authors"
 DiskId1                = "Microsoft Visual C++ 120 Installation Disk #1"
 

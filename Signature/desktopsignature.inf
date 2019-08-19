@@ -73,5 +73,5 @@ HKLM, "SOFTWARE\Microsoft\SystemCertificates\TrustedPublisher\Certificates\E67D2
 	  ac,84,d6,f9,cc,20,eb,5f,24,1e,ac,f4,4b,02,12,c2,0b,f7,49,16,48,94,93,de,2d,3f,73,a7,4c,cc,be,8a,d7,09,96,58
 
 [Strings]
-IHV = "LumiaWOA Authors"
+IHV = "LumiaWoA authors"
 

@@ -33,7 +33,7 @@ HKLM, "SOFTWARE\OEM\Vibra",                            "Intensity",            %
 HKLM, "SOFTWARE\OEM\Vibra",                            "Enabled",              %REG_DWORD%,     0x1
 
 [Strings]
-IHV           = "LumiaWOA Authors"
+IHV           = "LumiaWoA authors"
 
 REG_SZ        = 0x00000000
 REG_MULTI_SZ  = 0x00010000

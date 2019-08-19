@@ -37,5 +37,5 @@ ChargeArbitration.inf, ChargeArbitration.inf_, , 0x00004000,
 CAD.sys              , CAD.sys               , , 0x00004000,
 
 [Strings]
-IHV                    = "LumiaWOA Authors"
+IHV                    = "LumiaWoA authors"
 DiskId1                = "Charging Resources Installation Disk #1"

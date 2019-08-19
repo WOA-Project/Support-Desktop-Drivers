@@ -52,5 +52,5 @@ HKLM, "SYSTEM\ControlSet001\Services\DataManagementSvc", "ImagePath", 0x20000, "
 DataManagementSvc.exe
 
 [Strings]
-IHV = "LumiaWOA Authors"
+IHV = "LumiaWoA authors"
 

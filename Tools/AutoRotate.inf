@@ -34,7 +34,7 @@ HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Run", "AutoRotate", %REG_EXPAND
 HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\AutoRotation", "SensorPresent", %REG_DWORD%, 0x1
 
 [Strings]
-IHV           = "LumiaWOA Authors"
+IHV           = "LumiaWoA authors"
 
 REG_SZ        = 0x00000000
 REG_MULTI_SZ  = 0x00010000

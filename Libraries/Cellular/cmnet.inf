@@ -33,6 +33,6 @@ CmOemUtil.dll
 cmnet.dll
 
 [Strings]
-IHV                    = "LumiaWOA Authors"
+IHV                    = "LumiaWoA authors"
 DiskId1                = "Windows Phone Connection Manager Installation Disk #1"
 

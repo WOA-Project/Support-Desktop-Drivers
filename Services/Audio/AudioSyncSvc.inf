@@ -52,5 +52,5 @@ HKLM, "SYSTEM\ControlSet001\Services\AudioSyncSvc", "ImagePath", 0x20000, "%%Sys
 AudioSyncSvc.exe
 
 [Strings]
-IHV = "LumiaWOA Authors"
+IHV = "LumiaWoA authors"
 

@@ -271,5 +271,5 @@ HKLM, "SOFTWARE\Microsoft\SecurityManager\TransientObjects\%%5C%%5C.%%5CWnf%%5CW
 	  18,00,ff,ff,1f,11,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00
 
 [Strings]
-QCOM = "LumiaWOA Authors"
+IHV = "LumiaWoA authors"
 

@@ -168,6 +168,6 @@ HKLM, "SOFTWARE\Microsoft\EventSounds\Sounds\Keypress\RingerOffVibrateOff", "Ini
 HKLM, "SOFTWARE\Microsoft\EventSounds\Sounds\Keypress\RingerOffVibrateOn", "InitVol", 0x10001, 0x0
 
 [Strings]
-IHV     = "LumiaWOA Authors"
+IHV     = "LumiaWoA authors"
 DiskId1 = "Communications - Calls Installation Disk #1"
 
