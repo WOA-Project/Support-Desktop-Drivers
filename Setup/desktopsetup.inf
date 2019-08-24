@@ -7,7 +7,7 @@ Signature   = "$WINDOWS NT$"
 Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
-DriverVer   = 08/08/2019,1.0.0.0
+DriverVer   = 08/24/2019,1.0.0.1
 CatalogFile = desktopsetup.cat
 
 [DestinationDirs]
@@ -25,6 +25,7 @@ FirstLogon.cmd         = 0,,
 Oobe.cmd               = 0,,
 SilentProvisioner.exe  = 0,,
 SilentProvisionerL.exe = 0,,
+SilentProvisionerT.exe = 0,,
 SpecializeCommands.cmd = 0,,
 Unattend.xml           = 0,,
 
@@ -47,6 +48,7 @@ Oobe.cmd
 SpecializeCommands.cmd
 SilentProvisioner.exe
 SilentProvisionerL.exe
+SilentProvisionerT.exe
 devcon.exe
 FirstLogon.cmd
 
