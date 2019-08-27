@@ -31,6 +31,7 @@ Microsoft.VCLibs.ARM.14.00.appx = 0,,
 Chat.appxbundle = 0,,
 Tips.appxbundle = 0,,
 Airwaves.appxbundle = 0,,
+Dialer.msixbundle = 0,,
 
 
 ;*****************************************
@@ -57,6 +58,7 @@ Microsoft.VCLibs.ARM.14.00.appx
 Chat.appxbundle
 Tips.appxbundle
 Airwaves.appxbundle
+Dialer.msixbundle
 
 
 [Strings]
