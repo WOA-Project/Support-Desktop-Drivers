@@ -9,7 +9,7 @@ Class       = System
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318};
 CatalogFile = emb.cat
 Provider    = %Msft%
-DriverVer   = 01/01/2019,10.0.14903.1000
+DriverVer   = 09/08/2019,10.0.14903.1000
 CatalogFile = emb.cat
 
 [SourceDisksNames]                          ; predefined name
@@ -138,7 +138,7 @@ AddReg = MSRIL_SecurityAddReg
 ; FILE_DEVICE_SECURE_OPEN
 HKR, , DeviceCharacteristics, 0x10001, 0x100
 ; Allowing Read access to ImsService by SID for ImsSvc
-HKR, , Security             ,        , "D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;IU)(A;;GA;;;S-1-5-80-512643105-2644060240-3946469211-1024615288-2648212978)(A;;GA;;;S-1-5-80-2950457502-2299174248-3328245479-1326271200-3113355612)"
+HKR, , Security             ,        , "D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;IU)(A;;GA;;;S-1-5-80-512643105-2644060240-3946469211-1024615288-2648212978)(A;;GA;;;S-1-5-80-2950457502-2299174248-3328245479-1326271200-3113355612)(A;;GA;;;S-1-5-19)"
 
 ; NOTE: Uncomment when these drivers are built/packaged from onecore to make Mobile Image work
 ; Mark as Boot Critical to install the driver on Mobile image that does not use setupapi infrastructure
