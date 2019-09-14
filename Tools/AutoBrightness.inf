@@ -1,0 +1,43 @@
+;
+; AutoBrightness.inf
+;
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SYSTEM
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %IHV%
+DriverVer   = 08/28/2019,1.0.0.1
+CatalogFile = AutoBrightness.cat
+
+[DestinationDirs]
+AutoBrightness.Files = 11 ; \system32 directory on Windows 2000 and later versions
+
+[SourceDisksNames]
+0 = "Disk"
+
+[SourceDisksFiles]
+AutoBrightness.exe = 0,,
+
+[DefaultInstall.NTARM]
+CopyFiles = AutoBrightness.Files
+AddReg    = AutoBrightness_Reg
+
+[DefaultInstall.NTARM64]
+CopyFiles = AutoBrightness.Files
+AddReg    = AutoBrightness_Reg
+
+[AutoBrightness.Files]
+AutoBrightness.exe
+
+[AutoBrightness_Reg]
+HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Run", "AutoBrightness", %REG_EXPAND_SZ%, "%%windir%%\system32\AutoBrightness.exe"
+
+[Strings]
+IHV           = "LumiaWoA authors"
+
+REG_SZ        = 0x00000000
+REG_MULTI_SZ  = 0x00010000
+REG_EXPAND_SZ = 0x00020000
+REG_DWORD     = 0x00010001
+REG_BINARY    = 0x00000001
+
