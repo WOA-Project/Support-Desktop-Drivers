@@ -6,7 +6,7 @@ Signature   = "$WINDOWS NT$"
 Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
-DriverVer   = 08/08/2019,1.0.0.0
+DriverVer   = 08/08/2019,1.0.0.2
 CatalogFile = HapticsNotifications.cat
 
 [DestinationDirs]
@@ -20,7 +20,7 @@ HapticsNotifications.exe = 0,,
 
 [DefaultInstall.NTARM64]
 CopyFiles = HapticsNotifications.Files
-AddReg    = HapticsNotifications_Reg
+AddReg    = HapticsNotifications_Reg,Settings_Reg
 
 [HapticsNotifications.Files]
 HapticsNotifications.exe
@@ -28,9 +28,13 @@ HapticsNotifications.exe
 [HapticsNotifications_Reg]
 HKLM, "SOFTWARE\Microsoft\Windows\CurrentVersion\Run", "HapticsNotifications", %REG_EXPAND_SZ%, "%%windir%%\system32\HapticsNotifications.exe"
 
+[Settings_Reg]
 HKLM, "SOFTWARE\OEM\Vibra",                            "Duration",             %REG_DWORD%,     0x5
 HKLM, "SOFTWARE\OEM\Vibra",                            "Intensity",            %REG_DWORD%,     0x50
 HKLM, "SOFTWARE\OEM\Vibra",                            "Enabled",              %REG_DWORD%,     0x1
+
+[Settings_Reg.Security]
+"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;AU)(A;;GA;;;BG)(A;;GA;;;S-1-15-2-1)(A;;GA;;;WD)"
 
 [Strings]
 IHV           = "LumiaWoA authors"

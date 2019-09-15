@@ -30,6 +30,7 @@ Chat.appxbundle = 0,,
 Tips.appxbundle = 0,,
 Airwaves.appxbundle = 0,,
 Dialer.msixbundle = 0,,
+VibrationSettings.appxbundle = 0,,
 
 
 ;*****************************************
@@ -53,6 +54,7 @@ Chat.appxbundle
 Tips.appxbundle
 Airwaves.appxbundle
 Dialer.msixbundle
+VibrationSettings.appxbundle
 
 
 [Strings]
