@@ -6,7 +6,7 @@ Signature   = "$WINDOWS NT$"
 Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
-DriverVer   = 09/07/2019,1.0.0.1
+DriverVer   = 09/22/2019,1.0.0.2
 CatalogFile = AutoBrightnessSvc.cat
 
 [DestinationDirs]
@@ -20,7 +20,7 @@ AutoBrightnessSvc.exe = 0,,
 
 [DefaultInstall.NTARM64]
 CopyFiles = AutoBrightnessSvc.Files
-AddReg    = AutoBrightnessSvc_Reg
+AddReg    = AutoBrightnessSvc_Reg,Enhancement.Reg
 
 [DefaultInstall.NTARM64.Services]
 AddService = AutoBrightnessSvc,0x00000000,AutoBrightnessSvc_Service,
@@ -51,6 +51,12 @@ HKLM, "SYSTEM\ControlSet001\Services\AutoBrightnessSvc", "ObjectName", 0x0,"NT A
 
 [AutoBrightnessSvc.Files]
 AutoBrightnessSvc.exe
+
+[Enhancement.Reg]
+HKLM, "SYSTEM\CurrentControlSet\Services\DisplayEnhancementService\State\CMO00110_09_07D9_98", ,0x10
+
+[Enhancement.Reg.Security]
+"D:P(A;;GA;;;SY)(A;;GA;;;BA)(A;;GA;;;AU)(A;;GA;;;BG)(A;;GA;;;S-1-15-2-1)(A;;GA;;;WD)"
 
 [Strings]
 IHV           = "LumiaWoA authors"
