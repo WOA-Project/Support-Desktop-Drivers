@@ -99,8 +99,6 @@ REG ADD HKLM\SYSTEM\CurrentControlSet\services\fvevol /v BytesDecryptedInDiskReq
 REG ADD HKLM\SYSTEM\CurrentControlSet\services\fvevol /v MaxCryptoRequestsPerIo /t REG_DWORD /d 4 /f
 REG ADD HKLM\SYSTEM\CurrentControlSet\services\fvevol /v MaxDecryptRequests /t REG_DWORD /d 4 /f
 
-\Windows\OEM\NetworkMobileSettingsPatcher.exe
-
 cmd.exe /c \Windows\OEM\IHVSettingsSpecialize.cmd
 
 \Windows\OEM\devcon.exe update \Windows\OEM\Drivers\qcaud8994.inf AUDD\QCOM2451
