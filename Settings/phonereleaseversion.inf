@@ -18,7 +18,7 @@ CatalogFile = phonereleaseversion.cat
 Addreg    = phonereleaseversionReg
 
 [phonereleaseversionReg]
-HKLM, "SYSTEM\Platform\DeviceTargetingInfo", "PhoneReleaseVersion", 0x0,  "Project Sushi"
+HKLM, "SYSTEM\Platform\DeviceTargetingInfo", "PhoneReleaseVersion", 0x0,  "1911"
 
 [Strings]
 IHV                    = "LumiaWoA authors"
