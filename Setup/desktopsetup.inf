@@ -29,8 +29,6 @@ SilentProvisionerT.exe = 0,,
 SpecializeCommands.cmd = 0,,
 Unattend.xml           = 0,,
 
-NetworkMobileSettingsPatcher.exe = 0,,
-
 ;*****************************************
 ; desktopsetup  Install Section
 ;*****************************************
@@ -53,7 +51,6 @@ SilentProvisionerL.exe
 SilentProvisionerT.exe
 devcon.exe
 FirstLogon.cmd
-NetworkMobileSettingsPatcher.exe
 
 [Strings]
 IHV     = "LumiaWoA authors"
