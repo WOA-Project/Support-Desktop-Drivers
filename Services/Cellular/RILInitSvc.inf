@@ -6,7 +6,7 @@ Signature   = "$WINDOWS NT$"
 Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
-DriverVer   = 11/01/2019,1.0.0.6
+DriverVer   = 11/02/2019,1.0.0.8
 CatalogFile = RILInitSvc.cat
 
 [DestinationDirs]
@@ -41,13 +41,17 @@ ErrorControl  = 1
 ServiceBinary = "%%SystemRoot%%\System32\RILInitSvc.exe"
 
 [RILInitSvc_Reg]
-HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "DependOnService", 0x10000, "WwanSvc","RILAdaptation"
+HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "DependOnService", 0x10000, "RILAdaptation"
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "Description", 0x0, "RIL Initialization Service"
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "DisplayName", 0x0, "RIL Initialization Service"
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "ErrorControl", 0x10001, 0x1
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "ImagePath", 0x20000, "%%SystemRoot%%\System32\RILInitSvc.exe"
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "ObjectName", 0x0, "localSystem"
-HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "RequiredPrivileges", 0x10000, "SeChangeNotifyPrivilege","SeImpersonatePrivilege","SeAuditPrivilege","SeLoadDriverPrivilege"
+HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "RequiredPrivileges", 0x10000, \
+	  "SeShutdownPrivilege","SeTcbPrivilege","SeTakeOwnershipPrivilege","SeImpersonatePrivilege","SeLoadDriverPrivilege","SeBackupPrivilege","SeRestore"\
+	  "Privilege","SeDebugPrivilege","SeAssignPrimaryTokenPrivilege","SeLockMemoryPrivilege","SeSecurityPrivilege","SeCreatePagefilePrivilege","SeCreat"\
+	  "ePermanentPrivilege","SeIncreaseQuotaPrivilege","SeManageVolumePrivilege","SeSystemEnvironmentPrivilege","SeCreateSymbolicLinkPrivilege","SeChang"\
+	  "eNotifyPrivilege","SeIncreaseWorkingSetPrivilege","SeCreateGlobalPrivilege"
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "ServiceSidType", 0x10001, 0x1
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "Start", 0x10001, 0x2
 HKLM, "SYSTEM\ControlSet001\Services\RILInitSvc", "Type", 0x10001, 0x10
