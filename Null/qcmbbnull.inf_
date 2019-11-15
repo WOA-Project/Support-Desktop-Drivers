@@ -4,21 +4,14 @@
 
 [Version]
 Signature   = "$WINDOWS NT$"
-Class       = Null
-ClassGuid   = {84bcdf85-adb1-420a-a40f-cd71df4b0ccd}
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
 Provider    = %ManufacturerName%
 CatalogFile = qcmbbnull.cat
 DriverVer   = 10/06/2018,18.13.19.793
 
 [DestinationDirs]
 DefaultDestDir = 12
-
-[ClassInstall32]
-Addreg = SampleClassReg
-
-[SampleClassReg]
-HKR, ,     , 0, %ClassName%
-HKR, , Icon,  , -15
 
 [SourceDisksNames]
 1 = %DiskName%,,,""
@@ -57,9 +50,8 @@ KmdfLibraryVersion = 1.15
 [Strings]
 SPSVCINST_ASSOCSERVICE    = 0x00000002
 ManufacturerName          = "LumiaWoA authors"
-ClassName                 = "Nulled devices"
 DiskName                  = "Qualcomm Null Installation Disk"
 qcmbbnull.DeviceDesc      = "Qualcomm Null Device"
 qcmbbnull.SVCDESC         = "Qualcomm Null Service"
 
-QcMbb2Null.DeviceDesc     = "Qualcomm Mobile Broadband Device #2"
+QcMbb2Null.DeviceDesc     = "Qualcomm Mobile Broadband Device (Null)"
