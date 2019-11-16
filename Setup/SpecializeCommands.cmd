@@ -103,3 +103,7 @@ cmd.exe /c \Windows\OEM\IHVSettingsSpecialize.cmd
 
 \Windows\OEM\devcon.exe update \Windows\OEM\Drivers\qcaud8994.inf AUDD\QCOM2451
 cmd.exe /c \Windows\OEM\IHVDriversSpecialize.cmd
+
+REM Show a warning on MSM8992 for broken reboots
+
+if "%NUMBER_OF_PROCESSORS%"=="6" \Windows\OEM\RebootWarning.exe

@@ -28,7 +28,7 @@ SilentProvisionerL.exe = 0,,
 SilentProvisionerT.exe = 0,,
 SpecializeCommands.cmd = 0,,
 Unattend.xml           = 0,,
-prerelease.png         = 0,,
+RebootWarning.exe      = 0,,
 
 ;*****************************************
 ; desktopsetup  Install Section
@@ -52,7 +52,7 @@ SilentProvisionerL.exe
 SilentProvisionerT.exe
 devcon.exe
 FirstLogon.cmd
-prerelease.png
+RebootWarning.exe
 
 [Strings]
 IHV     = "LumiaWoA authors"
