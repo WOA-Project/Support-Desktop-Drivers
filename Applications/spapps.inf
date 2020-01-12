@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 08/08/2019,1.0.0.1
-CatalogFile = spapps.cat
+
+CatalogFile.NTARM   = spapps.arm.cat
+CatalogFile.NTARM64 = spapps.arm64.cat
 
 [DestinationDirs]
 ; 10 = Windows
@@ -16,31 +18,47 @@ PstDrv.Files       = 10,OEM\Applications
 [SourceDisksNames]
 0 = %DiskId1%
 
-[SourceDisksFiles]
-SPApps.ps1 = 0,,
+[SourceDisksFiles.ARM]
+SPApps.ps1 = 0,arm,
+CommsPhone.appxbundle = 0,arm,
+Microsoft.VCLibs.ARM.14.00.appx = 0,arm,
+Airwaves.appxbundle = 0,arm,
 
-Microsoft.NET.Native.Framework.2.2.appx = 0,,
-Microsoft.NET.Native.Runtime.2.2.appx = 0,,
-Microsoft.VCLibs.ARM64.14.00.appx = 0,,
+[SourceDisksFiles.ARM64]
+SPApps.ps1 = 0,arm64,
 
-CommsPhone.appxbundle = 0,,
-Microsoft.VCLibs.ARM.14.00.appx = 0,,
+Microsoft.NET.Native.Framework.2.2.appx = 0,arm64,
+Microsoft.NET.Native.Runtime.2.2.appx = 0,arm64,
+Microsoft.VCLibs.ARM64.14.00.appx = 0,arm64,
 
-Chat.appxbundle = 0,,
-Tips.appxbundle = 0,,
-Airwaves.appxbundle = 0,,
-Dialer.appxbundle = 0,,
-VibrationSettings.appxbundle = 0,,
+CommsPhone.appxbundle = 0,arm64,
+Microsoft.VCLibs.ARM.14.00.appx = 0,arm64,
+
+Chat.appxbundle = 0,arm64,
+Tips.appxbundle = 0,arm64,
+Airwaves.appxbundle = 0,arm64,
+Dialer.appxbundle = 0,arm64,
+VibrationSettings.appxbundle = 0,arm64,
 
 
 ;*****************************************
 ; spapps  Install Section
 ;*****************************************
 
+[DefaultInstall.NTARM]
+CopyFiles = PstDrv.Files
+
 [DefaultInstall.NTARM64]
 CopyFiles = PstDrv.Files
 
-[PstDrv.Files]
+[PstDrv.Files.NTARM]
+SPApps.ps1
+CommsPhone.appxbundle
+Microsoft.VCLibs.ARM.14.00.appx
+Airwaves.appxbundle
+
+
+[PstDrv.Files.NTARM64]
 SPApps.ps1
 
 Microsoft.NET.Native.Framework.2.2.appx

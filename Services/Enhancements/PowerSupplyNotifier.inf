@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 08/23/2019,1.0.0.1
-CatalogFile = PowerSupplyNotifier.cat
+
+CatalogFile.NTARM   = PowerSupplyNotifier.arm.cat
+CatalogFile.NTARM64 = PowerSupplyNotifier.arm64.cat
 
 [DestinationDirs]
 PowerSupplyNotifier.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -17,12 +19,24 @@ Media.Files = 10, Media
 0 = "Disk"
 
 [SourceDisksFiles]
-PowerSupplyNotifier.exe = 0,,
 Alert_charging.wma = 0,,
+
+[SourceDisksFiles.ARM]
+PowerSupplyNotifier.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+PowerSupplyNotifier.exe = 0,arm64,
+
+[DefaultInstall.NTARM]
+CopyFiles = PowerSupplyNotifier.Files,Media.Files
+AddReg    = PowerSupplyNotifier_Reg
 
 [DefaultInstall.NTARM64]
 CopyFiles = PowerSupplyNotifier.Files,Media.Files
 AddReg    = PowerSupplyNotifier_Reg
+
+[DefaultInstall.NTARM.Services]
+AddService = PowerSupplyNotifier,0x00000000,PowerSupplyNotifier_Service,
 
 [DefaultInstall.NTARM64.Services]
 AddService = PowerSupplyNotifier,0x00000000,PowerSupplyNotifier_Service,

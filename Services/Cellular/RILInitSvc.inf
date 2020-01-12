@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 11/13/2019,1.0.0.9
-CatalogFile = RILInitSvc.cat
+
+CatalogFile.NTARM   = RILInitSvc.arm.cat
+CatalogFile.NTARM64 = RILInitSvc.arm64.cat
 
 [DestinationDirs]
 RILInitSvc.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -15,12 +17,22 @@ RILInitSvc.Files = 11 ; \system32 directory on Windows 2000 and later versions
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
-RILInitSvc.exe = 0,,
+[SourceDisksFiles.ARM]
+RILInitSvc.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+RILInitSvc.exe = 0,arm64,
+
+[DefaultInstall.NTARM]
+CopyFiles = RILInitSvc.Files
+AddReg    = RILInitSvc_Reg
 
 [DefaultInstall.NTARM64]
 CopyFiles = RILInitSvc.Files
 AddReg    = RILInitSvc_Reg
+
+[DefaultInstall.NTARM.Services]
+AddService = RILInitSvc,0x00000000,RILInitSvc_Service,
 
 [DefaultInstall.NTARM64.Services]
 AddService = RILInitSvc,0x00000000,RILInitSvc_Service,

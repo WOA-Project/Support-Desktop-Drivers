@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 08/28/2019,1.0.0.1
-CatalogFile = AutoRotate.cat
+
+CatalogFile.NTARM   = AutoRotate.arm.cat
+CatalogFile.NTARM64 = AutoRotate.arm64.cat
 
 [DestinationDirs]
 AutoRotate.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -15,8 +17,11 @@ AutoRotate.Files = 11 ; \system32 directory on Windows 2000 and later versions
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
-AutoRotate.exe = 0,,
+[SourceDisksFiles.ARM]
+AutoRotate.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+AutoRotate.exe = 0,arm64,
 
 [DefaultInstall.NTARM]
 CopyFiles = AutoRotate.Files

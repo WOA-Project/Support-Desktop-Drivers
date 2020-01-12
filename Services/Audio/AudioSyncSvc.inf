@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 08/08/2019,1.0.0.1
-CatalogFile = AudioSyncSvc.cat
+
+CatalogFile.NTARM   = AudioSyncSvc.arm.cat
+CatalogFile.NTARM64 = AudioSyncSvc.arm64.cat
 
 [DestinationDirs]
 AudioSyncSvc.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -15,12 +17,22 @@ AudioSyncSvc.Files = 11 ; \system32 directory on Windows 2000 and later versions
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
-AudioSyncSvc.exe = 0,,
+[SourceDisksFiles.ARM]
+AudioSyncSvc.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+AudioSyncSvc.exe = 0,arm64,
+
+[DefaultInstall.NTARM]
+CopyFiles = AudioSyncSvc.Files
+AddReg    = AudioSyncSvc_Reg
 
 [DefaultInstall.NTARM64]
 CopyFiles = AudioSyncSvc.Files
 AddReg    = AudioSyncSvc_Reg
+
+[DefaultInstall.NTARM.Services]
+AddService = AudioSyncSvc,0x00000000,AudioSyncSvc_Service,
 
 [DefaultInstall.NTARM64.Services]
 AddService = AudioSyncSvc,0x00000000,AudioSyncSvc_Service,

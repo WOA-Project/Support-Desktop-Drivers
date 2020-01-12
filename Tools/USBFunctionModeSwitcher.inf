@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 09/29/2019,1.0.0.3
-CatalogFile = USBFunctionModeSwitcher.cat
+
+CatalogFile.NTARM   = USBFunctionModeSwitcher.arm.cat
+CatalogFile.NTARM64 = USBFunctionModeSwitcher.arm64.cat
 
 [DestinationDirs]
 USBFunctionModeSwitcher.Files = 10,OEM\Tools ; \Windows\OEM\Tools
@@ -16,7 +18,7 @@ Shortcut.Files                = 16407        ; All Users\Start Menu\Programs
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
+[SourceDisksFiles.ARM64]
 USBFunctionModeSwitcher.exe      = 0,,
 TaskDialog.dll                   = 0,,
 "USB Function Mode Switcher.lnk" = 0,,

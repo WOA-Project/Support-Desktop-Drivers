@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 09/27/2019,1.0.0.3
-CatalogFile = AutoBrightnessSvc.cat
+
+CatalogFile.NTARM   = AutoBrightnessSvc.arm.cat
+CatalogFile.NTARM64 = AutoBrightnessSvc.arm64.cat
 
 [DestinationDirs]
 AutoBrightnessSvc.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -15,12 +17,22 @@ AutoBrightnessSvc.Files = 11 ; \system32 directory on Windows 2000 and later ver
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
-AutoBrightnessSvc.exe = 0,,
+[SourceDisksFiles.ARM]
+AutoBrightnessSvc.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+AutoBrightnessSvc.exe = 0,arm64,
+
+[DefaultInstall.NTARM]
+CopyFiles = AutoBrightnessSvc.Files
+AddReg    = AutoBrightnessSvc_Reg,Enhancement.Reg
 
 [DefaultInstall.NTARM64]
 CopyFiles = AutoBrightnessSvc.Files
 AddReg    = AutoBrightnessSvc_Reg,Enhancement.Reg
+
+[DefaultInstall.NTARM.Services]
+AddService = AutoBrightnessSvc,0x00000000,AutoBrightnessSvc_Service,
 
 [DefaultInstall.NTARM64.Services]
 AddService = AutoBrightnessSvc,0x00000000,AutoBrightnessSvc_Service,

@@ -7,7 +7,9 @@ Class       = SYSTEM
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider    = %IHV%
 DriverVer   = 08/08/2019,1.0.0.2
-CatalogFile = HapticsNotifications.cat
+
+CatalogFile.NTARM   = HapticsNotifications.arm.cat
+CatalogFile.NTARM64 = HapticsNotifications.arm64.cat
 
 [DestinationDirs]
 HapticsNotifications.Files = 11 ; \system32 directory on Windows 2000 and later versions
@@ -15,8 +17,15 @@ HapticsNotifications.Files = 11 ; \system32 directory on Windows 2000 and later 
 [SourceDisksNames]
 0 = "Disk"
 
-[SourceDisksFiles]
-HapticsNotifications.exe = 0,,
+[SourceDisksFiles.ARM]
+HapticsNotifications.exe = 0,arm,
+
+[SourceDisksFiles.ARM64]
+HapticsNotifications.exe = 0,arm64,
+
+[DefaultInstall.NTARM]
+CopyFiles = HapticsNotifications.Files
+AddReg    = HapticsNotifications_Reg,Settings_Reg
 
 [DefaultInstall.NTARM64]
 CopyFiles = HapticsNotifications.Files
